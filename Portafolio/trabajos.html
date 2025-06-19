@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos</title>
+  <link rel="icon" href="Imagenes/logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #cbeaff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #172158;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #172158;
+      padding: 0.5rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 5px 20px;
+      display: inline-block;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+      background-color: #cccccc;
+      color: black;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #002147;
+      margin-bottom: 2rem;
+    }
+
+    .post {
+      background-color: white;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .post:hover {
+      transform: scale(1.02);
+    }
+
+    .post h2 {
+      margin-top: 0;
+      color: #002147;
+      font-size: 1.5rem;
+    }
+
+    .post p {
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .post a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: #005b96;
+      font-weight: bold;
+    }
+
+    .redes {
+      margin-top: 1rem;
+    }
+
+    .redes a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .redes a:hover {
+      color: rgb(239, 103, 241);
+    }
+    @media (max-width: 768px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .post {
+        padding: 1rem;
+      }
+
+      .post h2 {
+        font-size: 1.3rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem;
+      }
+
+      .post {
+        padding: 1rem;
+      }
+
+      .post h2 {
+        font-size: 1.2rem;
+      }
+
+      .post p, .post a {
+        font-size: 0.95rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <img src="Imagenes/logo.png" alt="Logo" style="height: 70px; border-radius: 50%;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobremi.html">Sobre mí</a></li>
+        <li><a href="trabajos.html">Proyectos</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="../index.html">Linktree</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mis Proyectos en JavaScript</h1>
+
+    <div class="post">
+      <h2>Lista de Tareas</h2>
+      <p>Una aplicación donde podés agregar, eliminar y guardar tareas usando LocalStorage. Ideal para organizar tus actividades diarias.</p>
+      <a href="trabajos1.html">Probar ahora →</a>
+    </div>
+
+    <div class="post">
+      <h2>Calculadora Básica</h2>
+      <p>Calculadora funcional hecha con JavaScript puro. Permite operaciones básicas como suma, resta, multiplicación y división.</p>
+      <a href="trabajos2.html">Probar ahora →</a>
+    </div>
+
+    <div class="post">
+      <h2>Galería de Imágenes</h2>
+      <p>Una galería interactiva con efecto lightbox para explorar imágenes. Diseñada para ser visualmente atractiva y responsive.</p>
+      <a href="trabajos3.html">Probar ahora →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Delfina San Martín - Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/delfina-san-martin/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/dsanmartin1" target="_blank">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendaciones Musicales</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="icon" href="Imagenes/Logos/flor hibiscus.png" type="Logo">
+  
+  <style>
+    :root {
+      --beige-claro: #f8f4f0;
+      --beige-oscuro: #e0dcd6;
+      --gris-suave: #b8b8b8;
+      --negro-suave: #444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--beige-claro);
+      color: var(--negro-suave);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+header {
+  width: 100%;
+  background-color: var(--beige-oscuro);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-content img {
+  height: 40px;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  color: var(--negro-suave);
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+nav {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--negro-suave);
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #e1d7d5;
+  border: 2px solid var(--gris-suave);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: var(--beige-oscuro);
+  color: black;
+  border-color: var(--negro-suave);
+}
+
+@media (min-width: 769px) {
+  .header-content {
+    flex-wrap: nowrap;
+  }
+
+  .header-title {
+    flex: unset;
+    text-align: center;
+  }
+
+  nav {
+    flex: unset;
+    text-align: right;
+  }
+}
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .separador {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--negro-suave);
+    }
+
+    h3, h4 {
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    h5 {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #444;
+    }
+
+    a:visited {
+      color: #444;
+    }
+
+    a:hover {
+      color: #827f7f;
+      text-decoration: none;
+    }
+
+    .galeria-tres {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .galeria-tres img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #btnSubir {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      background-color: var(--beige-oscuro);
+      color: var(--negro-suave);
+      border: none;
+      border-radius: 50%;
+      padding: 10px 14px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #btnSubir:hover {
+      background-color: var(--gris-suave);
+      transform: scale(1.1);
+    }
+    
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="header-content">
+    <img src="Imagenes/Logos/pngwing.com.png" alt="Logo Blog">
+    <h1 class="header-title">Tips Diarios</h1>
+    <nav>
+      <a href="../index.html" target="_blank">Linktree</a>
+    </nav>
+  </div>
+</header>
+<main class="post-content">
+  <h1>Recomendaciones Musicales para Inspirarte</h1>
+
+  <div class="galeria-tres">
+    <img src="Imagenes/sinfonia.jpeg" alt="musica">
+    <img src="Imagenes/vinilos.jpeg" alt="musica2">
+    <img src="Imagenes/musica.jpeg" alt="musicsa3">
+  </div>
+
+  <hr class="separador">
+
+  <h2>Melodías que te acompañan</h2>
+  <p>La música tiene el poder de cambiar nuestro estado de ánimo, hacernos viajar en el tiempo o simplemente acompañarnos en el día a día. Hoy te recomiendo tres géneros que valen la pena.</p>
+
+  <hr class="separador">
+
+  <h3>Si te gusta el R&B, estos son los artistas destacados del momento 🎶 </h3>
+<p>El R&B actual mezcla lo sensual con lo melódico. Estos artistas destacan por su estilo único, voces suaves y letras profundas.</p>
+<ul>
+  <li><a href="https://www.youtube.com/@sza" target="_blank">SZA</a></li>
+  <li><a href="https://www.youtube.com/@KALIUCHIS" target="_blank">Kali Uchis</a></li>
+  <li><a href="https://www.youtube.com/channel/UCaNrhBiXsXIM2epDl_kEzgQ" target="_blank">Usher</a></li>
+</ul>
+
+<h3>Para los fanáticos del rock, estas son las 3 canciones más clásicas 🎸 </h3>
+<p>Con guitarras, letras icónicas y mucha actitud, estas canciones marcaron una época y siguen sonando con fuerza. Ideales para un viaje en ruta.</p>
+<ul>
+  <li><a href="https://youtu.be/UCF9oHXhDMU?si=2ga9VzCkaVjaeTj8" target="_blank">Flaca - Andrés Calamaro</a></li>
+  <li><a href="https://youtu.be/LkZFSxt1xDI?si=7EQPEbQ-KPuGMQeZ" target="_blank">Ruta 66 - Pappo</a></li>
+  <li><a href="https://youtu.be/Gs9TnZXAS-Q?si=oYJ8hfRkmCo8jUIe" target="_blank">Me gustas mucho - Viejas Locas</a></li>
+</ul>
+
+<h3>Para un día relajado, música tranquila 🎧</h3>
+<p>Si buscás concentrarte o bajar un cambio, estas canciones suaves y atmosféricas son la compañía ideal. Melodías delicadas para momentos de descanso.</p>
+<ul>
+  <li><a href="https://youtu.be/PEM0Vs8jf1w?si=6sBw2nMESZ7v0vWF" target="_blank">Golden Hour - JVKE</a></li>
+  <li><a href="https://youtu.be/L9l8zCOwEII?si=TAQJMp9kTOTZqwdl" target="_blank">Sofia - Clairo</a></li>
+  <li><a href="https://youtu.be/P-hA2F2p_9g?si=zbPO0mBIIKgEP2VD" target="_blank">Mírenla - Ciro y Los Persas</a></li>
+</ul>
+
+
+  <hr class="separador">
+
+  <div style="background-color:#f8f4f0; padding:1rem; border-left:4px solid var(--beige-oscuro); margin:2rem 0; border-radius: 8px;">
+    <h4>✔️ Tip musical</h4>
+    <p>Armá una playlist con canciones que te hayan marcado en distintas etapas. Te vas a sorprender con todo lo que revive.</p>
+  </div>
+
+  <hr class="separador">
+
+  <h5>Escucha esta nueva canción para levantar el ánimo!</h5>
+  <div class="video-responsive">
+    <iframe 
+      src="https://www.youtube.com/embed/HU-Y8UYj_cA?si=hRCl_rfBrljjroWs" 
+      title="Anderson Paak: NPR Tiny Desk" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <hr class="separador">
+
+  <h4>¿Querés descubrir música nueva?</h4>
+  <p>Explorá el <a href="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF" target="_blank">Top 50 Global de Spotify</a> para expandir tu universo musical.</p>
+
+  <hr class="separador">
+
+  <a class="back-button" href="index.html">← Volver al inicio</a>
+</main>
+
+  <button id="btnSubir" title="Subir">↑</button>
+
+  <script>
+    const btnSubir = document.getElementById("btnSubir");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btnSubir.style.display = "block";
+      } else {
+        btnSubir.style.display = "none";
+      }
+    };
+
+    btnSubir.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
+

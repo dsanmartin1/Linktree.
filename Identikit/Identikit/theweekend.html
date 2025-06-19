@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Página Web</title>
+  <link rel="icon" href="Icono/Heart_corazón.svg.webp" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="menu.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #e0fbfc;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    nav {
+      background-color: #172158;
+        padding: 10px 0;
+        text-align: center;
+}
+
+nav a {
+   text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 10px 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: #cccccc;
+  color: black;
+}
+
+    .content {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #172158;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      font-size: 15px;
+      margin-bottom: 15px;
+      color: rgb(251, 248, 248);
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: rgb(249, 249, 249);
+      
+    }
+
+    .sidebar a:hover {
+      color: #a3e5ec;
+    }
+
+
+    .main-content {
+      flex-grow: 1;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+    }
+
+
+    iframe {
+      width: 80%;
+      height: 353px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    footer {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #172158;
+  width: 100%;
+  color: white;
+}
+
+footer p {
+  margin: 5px 0;
+}
+  </style>
+</head>
+<body>
+
+  <nav style="margin: 0; padding: 0;">
+   <a href="index.html">Inicio</a>
+  <a href="pagina1.html">Intereses</a>
+  <a href="pagina2.html">Música</a>
+  <a href="pagina3.html">Juegos</a>
+  <a href="pagina4.html">SZA</a>
+  <a href="/index.html">Linktree</a> 
+</nav>
+
+  <div class="content">
+  
+    <div class="sidebar">
+      <h2>Otras canciones que me gustan mucho</h2>
+      <ul>
+        <li><a href="pagina4.html">Snooze</a></li>
+        <li><a href="saturn.html">Saturn</a></li>
+        <li><a href="whatdoido.html">What Do I Do</a></li>
+        <li><a href="theweekend.html">The Weekend</a></li>
+        <li><a href="nobodygetsme.html">Nobody Gets Me</a></li>
+        <li><a href="brokenclocks.html">Broken Clocks</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <h1>Esta canción salió en 2017 y pertenece al albúm "CTRL"</h1>
+
+     
+      <iframe width="560" height="315" src="https://open.spotify.com/embed/track/0P6AWOA4LG1XOctzaVu5tt?si=56e77a5440584047" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+  </div>
+  
+  <footer style="margin-top: 20px; text-align: center; background-color: #172158; width: 100%; color: white;">
+    <p>¡Gracias por visitar mi página!</p>
+    <p>© 2025 - DSM</p>
+</body>
+</html>

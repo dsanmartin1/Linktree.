@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería | Mi Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="Imagenes/logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+body {
+      font-family: sans-serif;
+      background-color: #cbeaff;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #172158;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;  
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #172158;
+      padding: 0.5rem 1rem;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 5px 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .nav-menu li a:hover {
+      background-color: #cccccc;
+      color: black;
+  }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;
+      color: #002147;
+    }
+
+    .descripcion {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+      width: 600px;
+      height: 550px;
+      margin: 0 auto;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      width: calc(600px * 6);
+      transition: transform 0.6s ease;
+    }
+
+    .slide {
+      width: 600px;
+      height: 550px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 15px;
+      color: #444;
+      padding: 0 10px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(23,33,88,0.7);
+      color: #fff;
+      border: none;
+      font-size: 2rem;
+      padding: 0.2rem 0.8rem;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .arrow:hover {
+      background: rgba(23,33,88,0.9);
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .dots {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #bbb;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .dot.active {
+      background: #172158;
+    }
+
+    .volver-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #063758;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .volver-btn:hover {
+      background-color: #001b34;
+    }
+
+    .redes {
+      margin-top: 1rem;
+    }
+
+    .redes a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .redes a:hover {
+      color: rgb(239, 103, 241);
+    }
+    @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .nav-menu li a {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .slider {
+      width: 100%;
+      height: auto;
+    }
+
+    .slides {
+      width: 100% !important;
+      transform: translateX(0);
+    }
+
+    .slide {
+      width: 100% !important;
+      height: auto;
+    }
+
+    .slide img {
+      height: auto;
+      max-height: 400px;
+    }
+
+    .arrow {
+      font-size: 1.8rem;
+      padding: 0.3rem 0.7rem;
+    }
+
+    .caption {
+      font-size: 14px;
+    }
+
+    .volver-btn {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    main {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo img {
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .descripcion {
+      font-size: 0.95rem;
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+    }
+
+    .slide img {
+      max-height: 300px;
+    }
+
+    .caption {
+      font-size: 13px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+    }
+
+    .volver-btn {
+      font-size: 0.95rem;
+      padding: 0.6rem 1rem;
+    }
+}
+  </style>
+</head>
+<body>
+   <header>
+  <nav class="nav-bar">
+    <div class="logo">
+      <img src="Imagenes/logo.png" alt="Logo" style="height: 70px; border-radius: 50%;" />
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobremi.html">Sobre mí</a></li>
+      <li><a href="trabajos.html">Proyectos</a></li>
+      <li><a href="habilidades.html">Habilidades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="../index.html">Linktree</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <h1>Galería de Imágenes</h1>
+    <p class="descripcion">
+      En esta galería podés recorrer algunas experiencias, gustos y lugares importantes para mí.
+      Usá las flechas laterales o los puntos inferiores para moverte entre las imágenes.
+    </p>
+
+    <div class="slider">
+      <button class="arrow prev" aria-label="Imagen anterior">‹</button>
+
+      <div class="slides" id="slides">
+        <div class="slide">
+          <img src="Imagenes/MAPA.png" alt="Ubicación en Tigre">
+          <div class="caption">Acá es donde vivo, en Tigre, Zona Norte.</div>
+        </div>
+        <div class="slide">
+          <img src="Imagenes/bariloche.jpeg" alt="Bariloche con amigas">
+          <div class="caption">Vacaciones con amigas en enero en Bariloche.</div>
+        </div>
+        <div class="slide">
+          <img src="Imagenes/hambur.jpeg" alt="Hamburguesa">
+          <div class="caption">Mi comida favorita: hamburguesas.</div>
+        </div>
+        <div class="slide">
+          <img src="Imagenes/isla.jpg" alt="Casa en el Delta">
+          <div class="caption">Nuestra casa en el Delta, donde compartimos muchos fines de semana.</div>
+        </div>
+        <div class="slide">
+          <img src="Imagenes/oficina.jpeg" alt="Oficina en Belgrano">
+          <div class="caption">La oficina donde trabajo, ubicada en Belgrano.</div>
+        </div>
+        <div class="slide">
+          <img src="Imagenes/tradesky.jpg" alt="Restaurante sorpresa">
+          <div class="caption">Lugar sorpresa a donde me llevó mi novio por mi cumpleaños.</div>
+        </div>
+      </div>
+
+      <button class="arrow next" aria-label="Imagen siguiente">›</button>
+    </div>
+
+    <div class="dots" id="dots"></div>
+
+    <a href="trabajos.html" class="volver-btn">← Volver a Proyectos</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Delfina San Martín - Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/delfina-san-martin/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/dsanmartin1" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    let index = 0;
+    let slideWidth = document.querySelector('.slider').offsetWidth;
+
+    window.addEventListener('resize', () => {
+      slideWidth = document.querySelector('.slider').offsetWidth;
+      slides.style.transform = `translateX(-${index * slideWidth}px)`;
+    });
+
+    const dotsContainer = document.getElementById('dots');
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    const updateDots = () => {
+      [...dotsContainer.children].forEach((dot, i) =>
+        dot.classList.toggle('active', i === index)
+      );
+    };
+
+    const goToSlide = (i) => {
+      index = (i + total) % total;
+      slides.style.transform = `translateX(-${index * slideWidth}px)`;
+      updateDots();
+    };
+
+    document.querySelector('.next').addEventListener('click', () => goToSlide(index + 1));
+    document.querySelector('.prev').addEventListener('click', () => goToSlide(index - 1));
+
+    let startX = 0;
+    slides.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    slides.addEventListener('touchend', e => {
+      const diff = e.changedTouches[0].clientX - startX;
+      if (Math.abs(diff) > 50) goToSlide(index + (diff < 0 ? 1 : -1));
+    });
+  </script>
+</body>
+</html>

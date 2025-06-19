@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Linktree</title>
+  <link rel="icon" href="Imagenes/logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fdecfc;
+      background-image: url('Imagenes/desktop aura wallpaper.jpeg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 90%;
+      max-width: 500px;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .link {
+      display: block;
+      text-decoration: none;
+      color: #000;
+      background-color: #f1cceb;
+      padding: 14px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .link:hover {
+      background-color: #b977c5;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .link {
+        font-size: 16px;
+        padding: 12px 16px;
+      }
+    }
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .container {
+        padding: 35px 40px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .link {
+        font-size: 17px;
+      }
+    }
+    @media (min-width: 1025px) {
+      .container {
+        padding: 50px 60px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .link {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Imagenes/k.jpeg" alt="Tu Foto" class="avatar" />
+    <h1>¡Hola! Te invito a ver mis trabajos</h1>
+
+    <a class="link" href="Identikit/Identikit/index.html" target="_blank">Identikit</a>
+    <a class="link" href="Blog/index.html" target="_blank">Blog</a>
+    <a class="link" href="Portafolio/index.html" target="_blank">Portfolio</a>
+  </div>
+</body>
+</html>

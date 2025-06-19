@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía para principiantes en el gimansio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="icon" href="Imagenes/Logos/flor hibiscus.png" type="Logo">
+  
+  <style>
+    :root {
+      --beige-claro: #f8f4f0;
+      --beige-oscuro: #e0dcd6;
+      --gris-suave: #b8b8b8;
+      --negro-suave: #444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--beige-claro);
+      color: var(--negro-suave);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+  width: 100%;
+  background-color: var(--beige-oscuro);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-content img {
+  height: 40px;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  color: var(--negro-suave);
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+nav {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--negro-suave);
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #e1d7d5;
+  border: 2px solid var(--gris-suave);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: var(--beige-oscuro);
+  color: black;
+  border-color: var(--negro-suave);
+}
+
+@media (min-width: 769px) {
+  .header-content {
+    flex-wrap: nowrap;
+  }
+
+  .header-title {
+    flex: unset;
+    text-align: center;
+  }
+
+  nav {
+    flex: unset;
+    text-align: right;
+  }
+}
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-responsive + h3,
+    .video-responsive-title {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #444;
+      text-align: center;
+    }
+
+    .separador {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--negro-suave);
+    }
+
+    h3, h4 {
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    h5 {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #444;
+    }
+
+    a:visited {
+      color: #444;
+    }
+
+    a:hover {
+      color: #827f7f;
+      text-decoration: none;
+    }
+
+    .galeria-tres {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .galeria-tres img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #btnSubir {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      background-color: var(--beige-oscuro);
+      color: var(--negro-suave);
+      border: none;
+      border-radius: 50%;
+      padding: 10px 14px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #btnSubir:hover {
+      background-color: var(--gris-suave);
+      transform: scale(1.1);
+    }
+    
+  </style>
+</head>
+
+<body>
+ <header>
+  <div class="header-content">
+    <img src="Imagenes/Logos/pngwing.com.png" alt="Logo Blog">
+    <h1 class="header-title">Tips Diarios</h1>
+    <nav>
+      <a href="../index.html" target="_blank">Linktree</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="post-content">
+    <h1>Guía para Principiantes en el Gimnasio</h1>
+
+    <div class="galeria-tres">
+      <img src="Imagenes/gimnasio.jpeg" alt="GYM">
+      <img src="Imagenes/gym.jpeg" alt="GYM 2">
+      <img src="Imagenes/gym2.jpeg" alt="GYM 3">
+    </div>
+
+    <hr class="separador">
+
+    <h2>¿Por qué es importante hacer ejercicio?</h2>
+    <p>Hacer ejercicio no solo mejora tu estado físico, sino también tu salud mental. Te ayuda a reducir el estrés, aumentar la energía diaria y fortalecer tu autoestima. Además, es clave para prevenir enfermedades y mantener un estilo de vida equilibrado.</p>
+
+    <hr class="separador">
+
+    <h3>Establece metas claras 🏁</h3>
+    <p>Anotá tus metas, ponles una fecha y dividilas en pasos alcanzables. Eso te mantendrá enfocado y te permitirá ver tu progreso.</p>
+
+    <h3>Comenza con ejercicios básicos 💪🏼</h3>
+    <p>No hace falta que empieces con rutinas complicadas. Movimientos simples como sentadillas, flexiones o caminatas rápidas ya generan grandes beneficios.</p>
+
+    <h3>No te sobreexijas: incrementá la intensidad gradualmente 🏋🏻</h3>
+    <p>Tu cuerpo necesita tiempo para adaptarse. Aumentá el peso, las repeticiones o la duración de los entrenamientos de forma progresiva para obtener resultados sostenibles.</p>
+
+    <h3>Pedí ayuda si no sabés cómo hacer algo, está bien no saber 🙋🏻‍♀️</h3>
+    <p>Consultá a entrenadores, mirá tutoriales confiables o preguntá en el gimnasio. Aprender la técnica correcta es clave para evitar lesiones. ¡Nadie nace sabiendo!</p>
+
+    <hr class="separador">
+
+    <div style="background-color:#f3f3f3; padding:1rem; border-left:4px solid var(--beige-oscuro); margin:2rem 0; border-radius: 8px;">
+      <h4>✔️ Tip rápido</h4>
+      <p>Escuchá tu cuerpo. Si estás muy cansado o sentís dolor agudo, hacé una pausa. Descansar también es parte del progreso.</p>
+    </div>
+
+    <hr class="separador">
+
+    <h5>Recomendación de ejercicios para hacer en casa</h5>
+    <div class="video-responsive">
+      <iframe 
+        src="https://www.youtube.com/embed/q9b9afJ-GnA?si=Gxrvm2BN54CAt0CK" 
+        title="Video sobre alimentación saludable"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <hr class="separador">
+    
+    <h4>Tu esfuerzo vale: ¡mirá cuánto estás logrando!</h4>
+   <p>Usá esta <a href="https://www.myfitnesspal.com/es/exercise/lookup" target="_blank">calculadora online</a> y motiváte viendo cuántas calorías quemás entrenando día a día.</p>
+
+    
+    <hr class="separador">
+
+    <a class="back-button" href="index.html">← Volver al inicio</a>
+  </main>
+
+  <button id="btnSubir" title="Subir">↑</button>
+
+  <script>
+    const btnSubir = document.getElementById("btnSubir");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btnSubir.style.display = "block";
+      } else {
+        btnSubir.style.display = "none";
+      }
+    };
+
+    btnSubir.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

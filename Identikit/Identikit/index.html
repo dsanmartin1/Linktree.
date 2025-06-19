@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Página Web</title>
+  <link rel="icon" href="Icono/Heart_corazón.svg.webp" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #cff1fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      background-color: #172158;
+      padding: 5px 0;
+      text-align: center;
+      width: 100%; 
+      box-sizing: border-box; 
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 5px 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+    }
+
+    nav a:hover {
+      background-color: #cccccc;
+      color: black;
+    }
+
+    table {
+      margin-top: 40px;
+      border: 2px solid black;
+      border-collapse: collapse;
+      background-color: #cff1fc;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .titulo-tabla {
+      background-color: #172158;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .icon-links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    h1 {
+      background-color: #c1defd; 
+      color: rgb(7, 7, 7);
+      padding: 5px;
+      width: 100%; 
+      text-align: center; 
+      box-sizing: border-box; 
+      margin: 0; 
+    }
+    footer {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #172158;
+  width: 100%;
+  color: white;
+}
+
+footer p {
+  margin: 0px 0;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+  <a href="index.html">Inicio</a>
+  <a href="pagina1.html">Intereses</a>
+  <a href="pagina2.html">Música</a>
+  <a href="pagina3.html">Juegos</a>
+  <a href="pagina4.html">SZA</a>
+  <a href="/index.html">Linktree</a> 
+</nav>
+
+
+
+  <h1 class="h1-body">Mi nombre es Delfina San Martin</h1>
+  <p style="text-align: center;">Me gusta mucho viajar y conocer lugares nuevos</p>
+
+  <img src="Imagenes/IMG_0267.JPEG" alt="Foto mía" width="200" id="foto" />
+  <blockquote>El lugar que más me gustó conocer fue:</blockquote>
+
+  <a href="https://www.tripadvisor.com.ar/Tourism-g189398-Greece-Vacations.html" target="_blank" style="text-decoration: none;">Hace click para disfrutarlo</a>
+  <p>Te invito a ver donde queda <a href="https://www.google.com.ar/maps/place/Grecia" target="_blank" style="text-decoration: none;">ubicado</a> y mis islas favoritas:</p>
+
+  <div class="icon-links">
+    <a href="https://www.tripadvisor.com.ar/Tourism-g189430-Mykonos_Cyclades_South_Aegean-Vacations.html" target="_blank">
+      <img src="Imagenes/1f6a2.png" alt="Icono de barco" width="50">
+    </a>
+    <a href="https://www.tripadvisor.com.ar/Tourism-g189433-Santorini_Cyclades_South_Aegean-Vacations.html" target="_blank">
+      <img src="Imagenes/Isla.png" alt="Icono de Isla" width="50">
+    </a>
+    <a href="https://www.tripadvisor.com.ar/Tourism-g189413-Crete-Vacations.html" target="_blank">
+      <img src="Imagenes/sunrise-1448.png" alt="Icono de amanecer" width="50">
+    </a>
+  </div>
+
+  <table>
+    <tr>
+      <td colspan="5" class="titulo-tabla">Deportes que fui haciendo y dejé por aburrimiento</td>
+    </tr>
+    <tr>
+      <td bgcolor="c1defd">Natación</td>
+      <td bgcolor="c1defd">Gimnasia Artística</td>
+      <td bgcolor="c1defd">Danza Clásica</td>
+      <td bgcolor="c1defd">Hip-Hop y Jazz</td>
+      <td bgcolor="c1defd">Hockey</td>
+    </tr>
+    <tr>
+      <td bgcolor="#ddecfc"><img src="Imagenes/Natación.png" alt="Natación" width="70"></td>
+      <td bgcolor="#ddecfc"><img src="Imagenes/Gimnasia.png" alt="Gimnasia" width="70"></td>
+      <td bgcolor="#ddecfc"><img src="Imagenes/danza clasica.png" alt="Clásica" width="70"></td>
+      <td bgcolor="#ddecfc"><img src="Imagenes/Jazz.png" alt="Jazz" width="40"></td>
+      <td bgcolor="#ddecfc"><img src="Imagenes/hockey.png" alt="Hockey" width="40"></td>
+    </tr>
+    <tr>
+      <td bgcolor="c1defd">2006 - 2010</td>
+      <td bgcolor="c1defd">2007 - 2009</td>
+      <td bgcolor="c1defd">2011 - 2013</td>
+      <td bgcolor="c1defd">2014 - 2015</td>
+      <td bgcolor="c1defd">2015 - 2017</td>
+    </tr>
+  </table>
+
+  <footer style="margin-top: 30px; text-align: center; background-color: #172158; width: 100%; color: white;">
+   <p>¡Gracias por visitar mi página!</p>
+   <p>© 2025 - DSM</p>
+ </footer>
+
+    <button id="btnSubir" 
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
+        style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: #a3e5ec; border: none; padding: 10px 15px; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); font-weight: bold;">
+  ↑ Subir
+</button>
+</button>
+<script>
+   const btn = document.getElementById("btnSubir");
+ 
+   window.onscroll = function () {
+     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+       btn.style.display = "block";
+     } else {
+       btn.style.display = "none";
+     }
+   };
+ </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+
+h1-body {
+    font-family: Poppins, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    padding: 0;
+}
+
+.menu-ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    background-color: #ffafcc;
+}
+
+.menu-ul-li {
+    margin: 0 15px; 
+}
+
+.menu-ul-li a, 
+.menu-ul li a { 
+    text-decoration: none; 
+    color: black; 
+    font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+    background-color: #ffafcc; 
+}
+nav {
+    background-color: #ffafcc;
+    padding: 10px 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
+  }

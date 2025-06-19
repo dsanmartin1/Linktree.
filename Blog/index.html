@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips Diarios - Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="icon" href="Imagenes/Logos/flor hibiscus.png" type="Logo">
+  
+  <style>
+    :root {
+      --beige-claro: #f8f4f0;
+      --beige-oscuro: #e0dcd6;
+      --gris-suave: #b8b8b8;
+      --negro-suave: #444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--beige-claro);
+      color: var(--negro-suave);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+header {
+  width: 100%;
+  background-color: var(--beige-oscuro);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-content img {
+  height: 40px;
+}
+
+  .header-title {
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  color: var(--negro-suave);
+  flex: 1 1 100%;
+  text-align: center;
+  }
+
+  nav {
+  flex: 1 1 100%;
+  text-align: center;
+  }
+
+  nav a {
+  text-decoration: none;
+  color: var(--negro-suave);
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #e1d7d5;
+  border: 2px solid var(--gris-suave);
+  transition: all 0.3s ease;
+  display: inline-block;
+  }
+
+  nav a:hover {
+  background-color: var(--beige-oscuro);
+  color: black;
+  border-color: var(--negro-suave);
+  }
+
+  @media (min-width: 769px) {
+  .header-content {
+    flex-wrap: nowrap;
+  }
+
+  .header-title {
+    flex: unset;
+    text-align: center;
+  }
+
+  nav {
+    flex: unset;
+    text-align: right;
+  }
+    }
+
+    .intro {
+      max-width: 800px;
+      text-align: center;
+      margin: 2rem;
+      padding: 0 1rem;
+    }
+
+    .intro h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+    .post {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    article {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s;
+    }
+
+    article:hover {
+      transform: translateY(-5px);
+    }
+
+    article img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    article .content {
+      padding: 1rem;
+    }
+
+    article h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    article p {
+      font-size: 0.95rem;
+      color: var(--negro-suave);
+      text-align: center;
+    }
+
+    aside {
+      width: 100%;
+      max-width: 300px;
+      background-color: var(--beige-oscuro);
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 2rem auto;
+    }
+
+    aside h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    aside ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    aside li {
+      margin: 0.5rem 0;
+    }
+
+ .suscripcion {
+  background-color: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.suscripcion h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.suscripcion form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.suscripcion input {
+  padding: 0.8rem;
+  border: 1px solid var(--gris-suave);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.suscripcion button {
+  padding: 0.8rem;
+  border: none;
+  background-color: var(--beige-oscuro);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.suscripcion button:hover {
+  background-color: var(--gris-suave);
+}
+footer {
+  width: 100%; 
+  background-color: var(--beige-oscuro); 
+  color: var(--negro-suave);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+   @media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article {
+    width: 95%;
+  }
+
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+    .leer-mas {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--negro-suave);
+  font-weight: bold;
+  border: 1px solid var(--gris-suave);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.leer-mas:hover {
+  background-color: var(--beige-oscuro);
+  color: black;
+}
+.fecha {
+  color: #aaa;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+#btnSubir {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      background-color: var(--beige-oscuro);
+      color: var(--negro-suave);
+      border: none;
+      border-radius: 50%;
+      padding: 10px 14px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #btnSubir:hover {
+      background-color: var(--gris-suave);
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <img src="Imagenes/Logos/pngwing.com.png" alt="Logo Blog">
+    <h1 class="header-title">Tips Diarios</h1>
+    <nav>
+      <a href="../index.html" target="_blank">Linktree</a>
+    </nav>
+  </div>
+</header>
+
+  <section class="intro">
+    <h1>Bienvenidos a Tips Diarios</h1>
+    <p>Un blog para descubrir cada día consejos únicos sobre comida, fitness, moda y tendencias. Inspirate, aprendé y animate a cambiar tu rutina con pequeños grandes tips.</p>
+  </section>
+
+    <main>
+    <a href="alimentacion.html" class="post">
+  <article>
+    <img src="Imagenes/comida.jpeg" alt="Comida saludable">
+  <div class="content">
+    <p class="fecha">Publicado el 16 de enero de 2025</p>
+    <h2>Comé Mejor: Hábitos saludables que cambian tu día</h2>
+    <p>Pequeños cambios, grandes resultados. Descubrí cómo alimentarte mejor sin dejar de disfrutar</p>
+    <span class="leer-mas">Leer más →</span>
+  </div>
+  </article>
+  </a>
+
+    <a href="fitness.html" class="post">
+    <article>
+      <img src="Imagenes/gimnasio.jpeg" alt="Ejercicio">
+      <div class="content">
+      <p class="fecha">Publicado el 16 de febrero de 2025</p>
+      <h2>Tu primer día en el Gym: Guía para no abandonar a la semana</h2>
+      <p>Todo lo que necesitas saber para empezar con confianza, sin miedo y sin lesiones</p>
+      <span class="leer-mas">Leer más →</span>
+  </div>
+  </article>
+  </a>
+
+  <a href="tendencias.html" class="post">
+    <article>
+      <img src="Imagenes/moda1.jpeg" alt="Moda">
+      <div class="content">
+        <p class="fecha">Publicado el 16 de marzo de 2025</p>
+        <h2>Otoño-Invierno 2025: Tendencias que vas a querer usar ya</h2>
+        <p>Colores, prendas clave y lo que se viene fuerte esta temporada. Inspirate y renova tu look.</p>
+        <span class="leer-mas">Leer más →</span>
+      </div>
+    </article>
+  </a>
+
+  <a href="rock.html" class="post">
+    <article>
+      <img src="Imagenes/sinfonia.jpeg" alt="Rock Nacional">
+      <div class="content">
+        <p class="fecha">Publicado el 16 de abril de 2025</p>
+        <h2>¿Queres renovar tu playlist diaria?</h2>
+        <p>Una selección potente de artistas y canciones tanto en tendencia como clásicos</p>
+        <span class="leer-mas">Leer más →</span>
+      </div>
+    </article>
+  </a>
+
+  <a href="moda.html" class="post">
+    <article>
+      <img src="Imagenes/maquillaje1.jpeg" alt="Maquillaje">
+      <div class="content">
+        <p class="fecha">Publicado el 16 de junio de 2025</p>
+        <h2>Tips de maquillaje: Vas a sorprender a todos con los resultados</h2>
+        <p>Lográ un look impecable con los mejores productos de las marcas que te mostramos</p>
+        <span class="leer-mas">Leer más →</span>
+      </div>
+    </article>
+  </a>
+</main>
+
+  <aside>
+    <h3>Categorías</h3>
+    <ul>
+      <li>Comida</li>
+      <li>Fitness</li>
+      <li>Moda</li>
+      <li>Música</li>
+      <li>Maquillaje</li>
+    </ul>
+  </aside>
+
+  <section class="suscripcion">
+  <h3>Suscribite al newsletter</h3>
+  <form>
+    <input type="text" placeholder="Tu Nombre" required>
+    <input type="text" placeholder="Tu Apellido" required>
+    <input type="email" placeholder="Tu Email" required>
+    <button type="submit">Suscribirme</button>
+</form>
+</section>
+
+  <div id="mensajeExito" style="display: none; margin-top: 1rem; color: green; font-weight: bold;">
+  ¡Gracias por suscribirte! Revisa tu casilla de correo para confirmar tu suscripción.
+</div>
+
+    <footer>
+    &copy; 2025 Tips Diarios - Delfina San Martin - Todos los derechos reservados.
+  </footer>
+
+  <button id="btnSubir" title="Subir">↑</button>
+
+  <script>
+    const btnSubir = document.getElementById("btnSubir");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btnSubir.style.display = "block";
+      } else {
+        btnSubir.style.display = "none";
+      }
+    };
+
+    btnSubir.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const formulario = document.querySelector(".suscripcion form");
+    const mensaje = document.getElementById("mensajeExito");
+
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault();
+    mensaje.style.display = "block";
+    formulario.reset();
+
+    setTimeout(() => {
+      mensaje.style.display = "none";
+    }, 5000);
+});
+
+</script>
+</body>
+</html>

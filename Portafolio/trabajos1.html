@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tareas</title>
+  <link rel="icon" href="Imagenes/logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: #cbeaff;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #172158;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;  
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #172158;
+      padding: 0.5rem 1rem;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 5px 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .nav-menu li a:hover {
+      background-color: #cccccc;
+      color: black;
+  }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+      .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+    h1 {
+      text-align: center;
+      color: #002147;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p.intro {
+      text-align: center;
+      margin: -0.5rem 0 2rem 0;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    input[type="text"] {
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      background-color: #005b96;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #003f6d;
+    }
+
+    ul#task-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+
+    .delete-btn {
+      background: crimson;
+      color: white;
+      border: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+      background-color: darkred;
+    }
+
+    .volver-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #063758;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .volver-btn:hover {
+      background-color: #001b34;
+    }
+.redes {
+      margin-top: 0.5rem;
+    }
+
+    .redes a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+    .redes a:hover {
+        color: rgb(239, 103, 241);
+    }
+    h1 {
+      text-align: center;
+      color: #002147;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .nav-menu li a {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    form {
+      flex-direction: column;
+    }
+
+    input[type="text"], button {
+      width: 100%;
+    }
+
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .volver-btn {
+      width: 100%;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p.intro {
+      font-size: 1rem;
+    }
+  }
+
+    @media (max-width: 480px) {
+    .logo img {
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    .nav-menu li a {
+      font-size: 16px;
+    }
+
+    .volver-btn {
+      padding: 0.6rem 1rem;
+    }
+  }
+</style>
+  </style>
+</head>
+<body>
+
+   <header>
+  <nav class="nav-bar">
+    <div class="logo">
+      <img src="Imagenes/logo.png" alt="Logo" style="height: 70px; border-radius: 50%;" />
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobremi.html">Sobre mí</a></li>
+      <li><a href="trabajos.html">Proyectos</a></li>
+      <li><a href="habilidades.html">Habilidades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="../index.html">Linktree</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <div class="container"></div>
+    <h1>Lista de Tareas</h1>
+    <p class="intro">
+      Esta lista te permite anotar tareas que tengas pendientes. Escribí una tarea en el campo, hacé clic en <strong>Agregar</strong> y luego podés eliminarla cuando la completes.
+    </p>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Escribí una tarea" required />
+      <button type="submit">Agregar</button>
+    </form>
+
+    <ul id="task-list"></ul>
+
+    <a href="trabajos.html" class="volver-btn">← Volver a Proyectos</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Delfina San Martín - Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/delfina-san-martin/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/dsanmartin1" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('task-form');
+    const input = document.getElementById('task-input');
+    const list = document.getElementById('task-list');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const taskText = input.value.trim();
+      if (taskText === '') return;
+
+      const li = document.createElement('li');
+      li.textContent = taskText;
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Eliminar';
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.onclick = () => li.remove();
+
+      li.appendChild(deleteBtn);
+      list.appendChild(li);
+
+      input.value = '';
+    });
+  </script>
+</body>
+</html>

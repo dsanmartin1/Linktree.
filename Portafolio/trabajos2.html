@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="Imagenes/logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+body {
+      font-family: sans-serif;
+      background-color: #cbeaff;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #172158;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;  
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #172158;
+      padding: 0.5rem 1rem;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 5px 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .nav-menu li a:hover {
+      background-color: #cccccc;
+      color: black;
+  }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #002147;
+      margin-bottom: 1rem;
+    }
+
+    .descripcion {
+      text-align: center;
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    #calc {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #display {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: right;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .botones {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+
+    .botones button {
+      padding: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background-color: #e6f0ff;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .botones button:hover {
+      background-color: #bcdfff;
+    }
+
+    .volver-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #063758;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .volver-btn:hover {
+      background-color: #001b34;
+    }
+
+    .redes {
+      margin-top: 0.5rem;
+    }
+
+    .redes a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .redes a:hover {
+      color: rgb(239, 103, 241);
+    }
+    @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .nav-menu li a {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    .botones {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+    }
+
+    .botones button {
+      padding: 0.9rem;
+      font-size: 1rem;
+    }
+
+    #display {
+      font-size: 1.2rem;
+      padding: 0.6rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    .descripcion {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .volver-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo img {
+      height: 50px;
+    }
+
+    .botones button {
+      padding: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    .descripcion {
+      font-size: 0.95rem;
+    }
+
+    .volver-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    #display {
+      font-size: 1.1rem;
+    }
+}
+
+  </style>
+</head>
+<body>
+   <header>
+  <nav class="nav-bar">
+    <div class="logo">
+      <img src="Imagenes/logo.png" alt="Logo" style="height: 70px; border-radius: 50%;" />
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobremi.html">Sobre mí</a></li>
+      <li><a href="trabajos.html">Proyectos</a></li>
+      <li><a href="habilidades.html">Habilidades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="../index.html">Linktree</a></li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    <h1>Calculadora Básica</h1>
+    <p class="descripcion">
+      Esta calculadora permite realizar operaciones matemáticas básicas como suma, resta, multiplicación y división. 
+      Hacé clic en los botones numéricos y de operación, luego presioná <strong>=</strong> para ver el resultado. 
+      Podés usar el botón <strong>C</strong> para borrar el cálculo actual.
+    </p>
+
+    <div id="calc">
+      <input type="text" id="display" disabled />
+      <div class="botones">
+        <button id="clear">C</button><button></button><button></button><button></button>
+        <button>7</button><button>8</button><button>9</button><button>/</button>
+        <button>4</button><button>5</button><button>6</button><button>*</button>
+        <button>1</button><button>2</button><button>3</button><button>-</button>
+        <button>0</button><button>.</button><button>=</button><button>+</button>
+      </div>
+    </div>
+
+    <a href="trabajos.html" class="volver-btn">← Volver a Proyectos</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Delfina San Martín - Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/delfina-san-martin/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/dsanmartin1" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="ejercicio2.js"></script>
+</body>
+</html>

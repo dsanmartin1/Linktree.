@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trivia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #cff1fc;
+      color: #030303;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #172158;
+      padding: 5px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(254, 251, 251);
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    .trivia-container {
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .option-btn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      margin: 10px;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .option-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .option-btn img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .option-btn span {
+      display: block;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    #botonesExtras {
+      margin-top: 30px;
+    }
+
+    #botonesExtras button {
+      background-color: #ffafcc;
+      border: none;
+      padding: 12px 25px;
+      margin: 0 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #gif {
+      margin-top: 20px;
+    }
+    footer {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #172158;
+  width: 100%;
+  color: white;
+}
+
+footer p {
+  margin: 5px 0;
+}
+  </style>
+</head>
+<body>
+  <nav style="margin: 0; padding: 0;">
+    <a href="index.html">Inicio</a>
+  <a href="pagina1.html">Intereses</a>
+  <a href="pagina2.html">Música</a>
+  <a href="pagina3.html">Juegos</a>
+  <a href="pagina4.html">SZA</a>
+  <a href="/index.html">Linktree</a> 
+</nav>
+
+  <div class="trivia-container">
+    <div id="pregunta"></div>
+    <div class="options" id="opciones"></div>
+    <div id="botonesExtras" style="display: none;">
+      <button onclick="reiniciarTrivia()">Volver a empezar</button>
+      <button onclick="location.href='pagina3.html'">Inicio</button>
+    </div>
+    <div id="gif" style="display: none;">
+      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnFjMjJ3b3RjYTRhOXNuYmttM2tlczV6MWt1ZnZud2RrcjE4amc5MiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/TdfyKrN7HGTIY/giphy.gif" alt="GIF de felicitaciones">
+    </div>
+  </div>
+
+  <script>
+    const preguntas = [
+      {
+        pregunta: "¿Cómo se llama el hermano de Damon Salvatore?",
+        opciones: [
+          { texto: "Klaus", img: "Imagenes Trivia/Klaus.webp" },
+          { texto: "Jeremy", img: "Imagenes Trivia/Jeremy.jpeg" },
+          { texto: "Stefan", img: "Imagenes Trivia/Stefan.webp" },
+          { texto: "Elijah", img: "Imagenes Trivia/Elijah.webp" }
+        ],
+        correcta: "Stefan"
+      },
+      {
+        pregunta: "¿Qué parte del cuerpo tiene tatuada el plano de la prisión Michael Scofield?",
+        opciones: [
+          { texto: "El brazo", img: "Imagenes Trivia/Brazo.jpg" },
+          { texto: "La espalda", img: "Imagenes Trivia/Espalda.jpeg" },
+          { texto: "El torso", img: "Imagenes Trivia/Torso.jpeg" },
+          { texto: "La pierna", img: "Imagenes Trivia/Pierna.jpeg" }
+        ],
+        correcta: "El torso"
+      },
+      {
+        pregunta: "¿Quién es la líder de los 'Ángeles' en Casi Ángeles?",
+        opciones: [
+          { texto: "Mar", img: "Imagenes Trivia/Mar.jpeg" },
+          { texto: "Cielo", img: "Imagenes Trivia/Cielo CA.jpeg" },
+          { texto: "Tefi", img: "Imagenes Trivia/tefi.webp" },
+          { texto: "Paz", img: "Imagenes Trivia/paz.jpg" }
+        ],
+        correcta: "Cielo"
+      },
+      {
+        pregunta: "¿Quién es el presidente del Capitolio?",
+        opciones: [
+          { texto: "Seneca Crane", img: "Imagenes Trivia/seneca.jpeg" },
+          { texto: "Plutarch Heavensbee", img: "Imagenes Trivia/plutarch.jpeg" },
+          { texto: "Coriolanus Snow", img: "Imagenes Trivia/Snow.webp" },
+          { texto: "Haymitch Abernathy", img: "Imagenes Trivia/Haymitch.jpeg" }
+        ],
+        correcta: "Coriolanus Snow"
+      },
+      {
+        pregunta: "¿Cuál es la profesión de Andie Anderson?",
+        opciones: [
+          { texto: "Publicista", img: "Imagenes Trivia/publicista.jpg" },
+          { texto: "Periodista", img: "Imagenes Trivia/htlagitd.jpeg" },
+          { texto: "Abogada", img: "Imagenes Trivia/abogada.jpg" },
+          { texto: "Deportista", img: "Imagenes Trivia/deportista.jpg" }
+        ],
+        correcta: "Periodista"
+      }
+    ];
+
+    let indice = 0;
+
+    function mostrarPregunta() {
+      const p = preguntas[indice];
+      document.getElementById("pregunta").innerHTML = `<h2>${p.pregunta}</h2>`;
+      const opcionesDiv = document.getElementById("opciones");
+      opcionesDiv.innerHTML = "";
+
+      p.opciones.forEach(opcion => {
+        const btn = document.createElement("button");
+        btn.className = "option-btn";
+        btn.innerHTML = `<img src="${opcion.img}" alt="${opcion.texto}"><span>${opcion.texto}</span>`;
+        btn.onclick = () => verificarRespuesta(opcion.texto);
+        opcionesDiv.appendChild(btn);
+      });
+    }
+
+    function verificarRespuesta(respuesta) {
+      if (respuesta === preguntas[indice].correcta) {
+        indice++;
+        if (indice < preguntas.length) {
+          mostrarPregunta();
+        } else {
+          document.body.style.backgroundColor = "#b0f2b3"; // Verde pastel
+          document.getElementById("pregunta").innerHTML = "<h2>¡Felicitaciones! Completaste la trivia correctamente 🎉</h2>";
+          document.getElementById("opciones").innerHTML = "";
+          document.getElementById("botonesExtras").style.display = "block";
+          document.getElementById("gif").style.display = "block";
+        }
+      } else {
+        document.body.style.backgroundColor = "#f7d6d6"; // Rojo pastel
+        document.getElementById("pregunta").innerHTML = "<h2>Respuesta incorrecta 😢</h2>";
+        document.getElementById("opciones").innerHTML = "";
+        document.getElementById("botonesExtras").style.display = "block";
+      }
+    }
+
+    function reiniciarTrivia() {
+      indice = 0;
+      document.getElementById("botonesExtras").style.display = "none";
+      document.getElementById("gif").style.display = "none";
+      document.body.style.backgroundColor = "#cff1fc"; // Fondo original
+      mostrarPregunta();
+    }
+
+    window.onload = mostrarPregunta;
+  </script>
+
+  <footer style="margin-top: 105px; text-align: center; background-color: #172158; width: 100%; color: white;">
+    <p style="margin: 5px 0;">¡Gracias por visitar mi página!</p>
+    <p style="margin: 5px 0;">© 2025 - DSM</p>
+</body>
+</html>

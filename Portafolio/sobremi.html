@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="Imagenes/logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #cbeaff;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #172158;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;  
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #172158;
+      padding: 0.5rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 5px 20px;
+      display: inline-block;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+      background-color: #cccccc;
+      color: black;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #172158;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .perfil img {
+      max-width: 160px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .info {
+      max-width: 700px;
+      margin-top: 1rem;
+      padding: 0 1rem;
+    }
+
+    .info p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .redes {
+      margin-top: 1rem;
+    }
+
+    .redes a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .redes a:hover {
+      color: rgb(239, 103, 241);
+    }
+    @media (max-width: 768px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .info p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .perfil img {
+        max-width: 120px;
+      }
+
+      .info {
+        padding: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <img src="Imagenes/logo.png" alt="Logo" style="height: 70px; border-radius: 50%;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobremi.html">Sobre mí</a></li>
+        <li><a href="trabajos.html">Proyectos</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="../index.html">Linktree</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Sobre mí</h1>
+    <div class="perfil">
+      <img src="Imagenes/delfi.jpeg" alt="Foto de perfil">
+      <div class="info">
+        <p><strong>¡Hola! Mi nombre es Delfina San Martín</strong>, tengo 21 años y me encuentro cursando la Licenciatura en <strong>Recursos Humanos</strong>.</p>
+
+        <p>Hace dos años, casi tres, que <strong>trabajo en Megatlon</strong> en el área de Administración de Personal. En este área vemos toda la parte administrativa de RRHH, como las altas en AFIP, gestión de prepagas, relaciones laborales (sindicatos), entre muchas otras cosas más.</p>
+
+        <p>Me gustan mucho los <strong>idiomas</strong>. Aunque actualmente solo sé inglés y francés, me gustaría aprender italiano, ruso y alemán.</p>
+
+        <p>En mi tiempo libre me gusta hacer planes tranquilos, como juntarme en una casa a comer o ver una película. Mis dos géneros favoritos de películas para ver son <strong>comedias románticas</strong> y <strong>terror</strong>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Delfina San Martín - Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/delfina-san-martin/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/dsanmartin1" target="_blank">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

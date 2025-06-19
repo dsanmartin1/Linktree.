@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habilidades</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="Imagenes/logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #cbeaff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #172158;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;  
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #172158;
+      padding: 0.5rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(251, 248, 248);
+      padding: 5px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+      background-color: #cccccc;
+      color: black;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #172158;
+      margin-bottom: 2rem;
+    }
+
+    .contenedor-habilidades {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .seccion {
+      flex: 1;
+      min-width: 250px;
+      background-color: #eaf2ff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .seccion h2 {
+      color: #172158;
+      border-bottom: 2px solid #a5c4ff;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .redes {
+      margin-top: 1rem;
+    }
+
+    .redes a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .redes a:hover {
+      color: rgb(239, 103, 241);
+    }
+
+    @media (max-width: 1024px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem;
+      }
+
+      .contenedor-habilidades {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .seccion {
+        width: 100%;
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .seccion h2 {
+        font-size: 18px;
+      }
+
+      li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <img src="Imagenes/logo.png" alt="Logo" style="height: 70px; border-radius: 50%;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobremi.html">Sobre mí</a></li>
+        <li><a href="trabajos.html">Proyectos</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="../index.html">Linktree</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Habilidades</h1>
+    <div class="contenedor-habilidades">
+      <div class="seccion">
+        <h2>Educación</h2>
+        <ul>
+          <li>Colegio San Ramón</li>
+          <li>UADE (actualidad)</li>
+          <li>C1 (Advanced) - Cambridge</li>
+          <li>People Analytics - Education IT</li>
+          <li>Power BI - CoderHouse</li>
+        </ul>
+      </div>
+
+      <div class="seccion">
+        <h2>Herramientas</h2>
+        <ul>
+          <li>Paquete Office (Excel avanzado)</li>
+          <li>TuRecibo - Visma</li>
+          <li>ARCA (Antes AFIP)</li>
+          <li>HTML, CSS, JS (nivel inicial)</li>
+        </ul>
+      </div>
+
+      <div class="seccion">
+        <h2>Habilidades Personales</h2>
+        <ul>
+          <li>Organización y planificación</li>
+          <li>Trabajo en equipo</li>
+          <li>Resolución de problemas</li>
+          <li>Buena comunicación interpersonal</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Delfina San Martín - Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/delfina-san-martin/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/dsanmartin1" target="_blank">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
